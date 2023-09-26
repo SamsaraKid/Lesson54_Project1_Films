@@ -40,5 +40,5 @@ class Patient(models.Model):
     name = models.CharField(max_length=20)
     kind = models.ForeignKey(Kind, on_delete=models.SET_NULL, null=True)
     breed = models.ForeignKey(Breed, on_delete=models.SET_NULL, null=True)
-    diag = models.ManyToManyField(Diagnosis, on_delete=models.SET_NULL, null=True)
-    meds = models.ManyToManyField(Medicines, on_delete=models.SET_NULL, null=True)
+    diag = models.ManyToManyField(Diagnosis, null=True)
+    meds = models.ManyToManyField(Medicines, null=True)
