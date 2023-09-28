@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block head %}
+    <title>Медкарта пациента {{ patient.name }}</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="center-div">
+    <h2>Информация о пациенте</h2>
+        <table>
+            <tr>
+                <th>Кличка</th>
+                <td>{{ patient.name }}</td>
+            </tr>
+            <tr>
+                <th>Вид</th>
+                <td>{{ patient.kind }}</td>
+            </tr>
+            <tr>
+                <th>Разновидность</th>
+                <td>{{ patient.breed }}</td>
+            </tr>
+            <tr>
+                <th>Диагнозы</th>
+                <td>{{ patient.diags }}</td>
+            </tr>
+            <tr>
+                <th>Медикаменты</th>
+                <td>{{ patient.medses }}</td>
+            </tr>
+            <tr>
+                <th>Врач</th>
+                <td>{{ patient.doc }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock content %}

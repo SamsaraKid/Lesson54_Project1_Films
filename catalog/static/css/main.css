@@ -1,0 +1,62 @@
+body{
+    font-family: "Segoe UI";
+    background-color: dimgrey;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    line-height: 2em;
+}
+
+.menu a{
+    text-decoration: none;
+    color: orange;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+}
+
+.menu a:hover{
+    background-color: orange;
+    color: black;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+p{
+    display: inline;
+}
+
+.inline-a{
+    color: midnightblue;
+    text-decoration: none;
+}
+
+.inline-a:hover{
+    border-bottom: midnightblue 1px dotted;
+}
+
+.center-div{
+    width: max-content;
+    margin: auto;
+    text-align: center;
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px dotted black;
+    padding: 0.5em 2em;
+    background-color: lightgray;
+}

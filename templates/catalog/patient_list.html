@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="center-div">
+    <h2>Список пациентов</h2>
+        <table>
+            <tr><th>Кличка</th><th>Вид, разновидность</th></tr>
+            {% for patient in patient_list %}
+                <tr>
+                    <td><a href="{{ patient.get_absolute_url }}" class="inline-a">{{ patient.name }}</a></td>
+                    <td>{{ patient.kind }}, {{ patient.breed }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock content %}

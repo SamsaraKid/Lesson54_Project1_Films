@@ -20,5 +20,7 @@ from catalog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home')
+    path('', views.index, name='home'),
+    path('patients/', views.Patientlist.as_view(), name='allpatients'),
+    path('patients/<slug:pk>/', views.PatientDetail.as_view(), name='medcard')
 ]

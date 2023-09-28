@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Kind(models.Model):
@@ -58,3 +59,6 @@ class Patient(models.Model):
 
     def medses(self):
         return ', '.join([i.name for i in self.meds.all()])
+
+    def get_absolute_url(self):
+        return reverse('medcard', args=[self.id])
