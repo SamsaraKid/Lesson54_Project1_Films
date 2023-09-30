@@ -44,6 +44,7 @@ class Doctor(models.Model):
     def __str__(self):
         return self.name
 
+
 class Patient(models.Model):
     name = models.CharField(max_length=20, verbose_name='Кличка')
     kind = models.ForeignKey(Kind, on_delete=models.SET_NULL, null=True, verbose_name='Вид')
