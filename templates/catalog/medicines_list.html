@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="center-div">
+    <h2>Лекарства в нашей аптеке</h2>
+    <ul>
+        {% for med in medicines_list %}
+            <li>{{ med.name }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock content %}

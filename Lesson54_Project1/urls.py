@@ -17,10 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from catalog import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
     path('patients/', views.Patientlist.as_view(), name='allpatients'),
-    path('patients/<slug:pk>/', views.PatientDetail.as_view(), name='medcard')
+    path('patients/<slug:pk>/', views.PatientDetail.as_view(), name='medcard'),
+    path('doctors/', views.Doctorlist.as_view(), name='alldoctors'),
+    path('meds/', views.Medicineslist.as_view(), name='allmeds'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

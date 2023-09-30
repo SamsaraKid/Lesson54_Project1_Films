@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="center-div">
+    <h2>Наши врачи</h2>
+    <div class="flex-row">
+        {% for doctor in doctor_list %}
+        <div class="person-card">
+            <div class="card-img"><img src="{{ doctor.avatar.url }}"></div>
+            <div><h3>{{ doctor.name }}</h3></div>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+{% endblock content %}

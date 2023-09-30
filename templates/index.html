@@ -14,8 +14,9 @@
     <div class="menu">
         <a href="{% url 'home' %}">Главная</a>
         <a href="{% url 'allpatients' %}">Пациенты</a>
-        <a href="">Врачи</a>
-        <a href="">Медикаменты</a>
+        <a href="{% url 'alldoctors' %}">Врачи</a>
+        <a href="{% url 'allmeds' %}">Медикаменты</a>
+        <a href="{% url 'admin:index' %}">Админка</a>
     </div>
 
 {% endblock menu %}
@@ -28,7 +29,6 @@
         <h3>Используется {{ k3 }} медицинскиих препаратов</h3>
     </div>
 {% endblock content %}
-
 
 
 
